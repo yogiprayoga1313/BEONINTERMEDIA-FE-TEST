@@ -3,7 +3,6 @@ import http from '../helpers/http'
 import { Helmet } from 'react-helmet'
 import { Formik } from 'formik'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
 
 function Home() {
     const [cluster, setCluster] = React.useState([])
@@ -209,7 +208,8 @@ function Home() {
                                                 name='status_huni_id'
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                value={values.status_huni_id}>
+                                                value={values.status_huni_id || 'silahkan Pilih'}>
+                                                <option value="">Silahkan Pilih</option>
                                                 {status_huni.map(item => (
                                                     <>
                                                         <option key={item?.id} value={item?.id}>
@@ -225,7 +225,8 @@ function Home() {
                                                 name='status_payment_id'
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                value={values.status_payment_id}>
+                                                value={values.status_payment_id || 'Silahkan Pilih'}>
+                                                <option value="">Silahkan Pilih</option>
                                                 {status_payment.map(item => (
                                                     <>
                                                         <option key={item?.id} value={item?.id}>
