@@ -13,7 +13,7 @@ Web application For A web application for listing products and creating new prod
 
 # View Page
 ##Dekstop Page
-![Dekstop](asset/Dekstop-page.png)
+![Dekstop](src/assets/Desktop-page.png)
 
 # Built with
 
